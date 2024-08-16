@@ -1,5 +1,5 @@
 //Search through a list, if the target is in the list return its position else return -1
-function linear_search(array: number[], target: number){
+function linear_search (array: number[], target: number){
     for(let i = 0; i < array.length; i++){  //O(n)
         if (array[i] == target){
             return i;

@@ -118,13 +118,13 @@ class BinaryTree<T>{
 }
 
 
-const myBTree = new BinaryTree<number>();
-myBTree.root = new TreeNode(1);
-myBTree.root.left = new TreeNode(2);
-myBTree.root.right = new TreeNode(3);
-myBTree.root.left.left  = new TreeNode(4);
-myBTree.root.left.right = new TreeNode(5);
-myBTree.root.right.left = new TreeNode(6);
-myBTree.root.right.right = new TreeNode(7);
+const myBinTree = new BinaryTree<number>();
+myBinTree.root = new TreeNode(1);
+myBinTree.root.left = new TreeNode(2);
+myBinTree.root.right = new TreeNode(3);
+myBinTree.root.left.left  = new TreeNode(4);
+myBinTree.root.left.right = new TreeNode(5);
+myBinTree.root.right.left = new TreeNode(6);
+myBinTree.root.right.right = new TreeNode(7);
 
-myBTree.traversal(myBTree.root);
+myBinTree.traversal(myBinTree.root);

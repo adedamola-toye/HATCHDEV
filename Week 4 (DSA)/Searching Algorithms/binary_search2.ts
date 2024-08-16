@@ -1,8 +1,8 @@
 
 
 function binarySearch(array: number[], target){
-    let firstIndex = 0;  //O(n)
-    let lastIndex = array.length - 1;  //O(n)
+    let firstIndex = 0;  
+    let lastIndex = array.length - 1;  
 
     while(firstIndex <= lastIndex){
         let midIndex =Math.floor( (firstIndex + lastIndex) / 2); 

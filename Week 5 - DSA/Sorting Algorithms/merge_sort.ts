@@ -58,5 +58,9 @@ function merge(left: number[], right: number[]){
         sortedArray.push(right[j]);
         j++;
     }
-
+    return sortedArray;
 }
+
+const myArray = [5, 4, 3, 2, 1];
+const sortedArray = merge_sort(myArray);
+console.log(sortedArray);

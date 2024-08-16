@@ -19,3 +19,18 @@ new_array.forEach((value) =>{
 });
 console.log(oneInArray);
 
+//INSERTING TO AN ARRAY
+function insert(array, insertionIndex, item){
+    array.push(0);
+    let i = array.length - 2;
+    while(i >= insertionIndex){
+        array[i+1] = array[i];
+        i = i-1;
+    }
+    array[insertionIndex] = item;
+}
+
+let arr = [1, 2, 3, 4, 5];
+insert(arr, 0, 10);
+console.log(arr);  // Output: [1, 2, 10, 3, 4, 5]
+

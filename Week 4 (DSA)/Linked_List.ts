@@ -17,6 +17,8 @@ console.log(node1.next_node)
 
 class SinglyLinkedList<T>{
     head: LNode<T>  | null;
+    tail: LNode<T> | null;
+
 
     isEmpty(): boolean{
         return this.head == null
@@ -114,7 +116,7 @@ class SinglyLinkedList<T>{
     //REMOVING A NODE
     remove(key: T){
        if(!this.head){
-        throw new Error("You van't delete from an empty list");
+        throw new Error("You can't delete from an empty list");
         return;
        }
 
@@ -124,10 +126,10 @@ class SinglyLinkedList<T>{
             return;
        }
 
-       let current_node: LNode<T> | null = this.head;
+       let current_node: LNode<T> | null | undefined = this.head;
         while(current_node !== null){
-            if(current_node.data === key){
-                current_node.next_node = current_node.next_node;
+            if(current_node!.data === key){
+                current_node = current_node!.next_node?.next_node;
                 return;
             }
             current_node = current_node.next_node;
@@ -173,3 +175,11 @@ myLinkedList.append(50);
 myLinkedList.print();
 
 myLinkedList.search(10);
+
+myLinkedList.remove(50);
+console.log(myLinkedList);
+
+
+
+
+export {LNode, SinglyLinkedList};
