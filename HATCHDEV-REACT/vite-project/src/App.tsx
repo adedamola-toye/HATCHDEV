@@ -4,6 +4,8 @@ import './App.css'
 
 function App() {
   const [name, setName] = useState("Toyibah")
+  const [count, setCount] = useState(0)
+  const [visibility, setVisibility] = useState(false)
 
   /* useEffect(() => {
     console.log("Heyy, I'm a useEffect function")
@@ -17,8 +19,7 @@ function App() {
     console.log("Heyy, I'm a useEffect function")
   }, [count]) //called once in first render and when only count changes it renders again. not called when maybe name changes or something
 
-  const [count, setCount] = useState(0)
-  const [visibility, setVisibility] = useState(false)
+
 
   const handleClick = (value: number) => {
     setCount(value);
